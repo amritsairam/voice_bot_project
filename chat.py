@@ -1,5 +1,6 @@
 import openai
 import os 
+import httpx
 
 from dotenv import load_dotenv
 
@@ -7,7 +8,7 @@ load_dotenv()
 
 openai_api_key = os.getenv('OPENAI_API_KEY')
 
-client = openai.OpenAI(api_key=openai_api_key)
+client = openai.OpenAI(api_key=openai_api_key,http_client=httpx.Client(http2=False))
 
 def get_chat_response(input_text):
     response = client.chat.completions.create(

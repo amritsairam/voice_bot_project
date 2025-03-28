@@ -46,6 +46,8 @@ import openai
 import uuid
 import os
 
+import httpx
+
 # Ensure the static/audio directory exists
 os.makedirs("static/audio", exist_ok=True)
 
