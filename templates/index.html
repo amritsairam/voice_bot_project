@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Chat Bot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Voice Chat Bot</h1>
+    <button id="record-btn">Hold to Talk</button>
+    <p id="transcription"></p>
+    <p id="response"></p>
+    <audio id="audio-player" controls></audio>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
